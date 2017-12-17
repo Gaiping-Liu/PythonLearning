@@ -123,3 +123,42 @@ print(product(5))
 print(product(5, 6))
 print(product(5, 6, 7))
 print(product(5, 6, 7, 9))
+
+
+# 递归函数需要注意防止栈溢出， fact(1000) 就会溢出
+def factbad(n):
+    if n == 1:
+        return 1
+    return n * factbad(n - 1)
+
+
+'''
+解决递归调用栈溢出的方法是通过尾递归优化。（循环可以看成是一种特殊测尾递归函数）
+尾递归是指，再函数返回的时候，调用自身本身，并且return 语句不包含表达式
+尾递归调用时，如果做了优化，栈不会增长，因此，无论多少次调用也不会导致栈溢出。
+遗憾的是，大多数编程语言并没有针对尾递归做优化，Python解释器也没有做优化，所以，即使如下fact（n) 函数改成尾递归方式，也会导致栈溢出。
+'''
+
+
+def fact(n):
+    return fact_iter(n, 1)
+
+
+def fact_iter(num, product):
+    if num == 1:
+        return product
+    return fact_iter(num - 1, num * product)
+
+
+# print(fact(10000))
+
+def move(n, a, b, c):
+    if n == 1:
+        print(a, '-->', c)
+    else:
+        move(n - 1, a, c, b)
+        move(1, a, b, c)
+        move(n - 1, b, a, c)
+
+
+move(3, 'a', 'b', 'c')

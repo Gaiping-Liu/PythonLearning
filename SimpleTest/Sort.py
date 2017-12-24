@@ -15,7 +15,7 @@ def MergeTwoSortedList(lista, listb):
                 break
             aindex = aindex + 1
         if (aindex == len(lista)):
-            lista.extend(listb[bindex::])  # why return this is none?
+            lista.extend(listb[bindex::])  # why return this is none? cause this a function
             return lista
     return lista
 

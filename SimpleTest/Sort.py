@@ -20,8 +20,8 @@ def MergeTwoSortedList(lista, listb):
     return lista
 
 
-lista = [0, 0, 3, 4, 5, 6]
-listb = [2, 4, 5, 7, 8]
+lista = [4, 5, 6]
+listb = [2, 3, 3]
 print(MergeTwoSortedList(lista, listb))  # This has changed lista
-listc = MergeTwoSortedList(lista, listb)
-print(listc)
+# listc = MergeTwoSortedList(lista, listb)
+# print(listc)

@@ -12,7 +12,7 @@ def MergeTwoSortedList(lista, listb):
         while aindex < len(lista):
             if (listb[bindex] < lista[aindex]):
                 lista.insert(aindex, listb[bindex])
-                break
+                break 
             aindex = aindex + 1
         if (aindex == len(lista)):
             lista.extend(listb[bindex::])  # why return this is none? cause this a function

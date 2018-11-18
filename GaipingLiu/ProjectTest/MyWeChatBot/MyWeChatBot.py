@@ -6,7 +6,7 @@ from itchat.content import *
 import requests,time,random,itchat
 
 
-
+#test local branch
 #自动把各种聊天内容发给微软小冰isXiaobingChat的小程序（附带图灵机器人和小冰聊天isTuling）
 
 isTuling,isXiaobingChat= True ,True

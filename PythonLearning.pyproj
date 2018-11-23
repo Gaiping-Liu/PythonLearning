@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4d1f02b9-a818-4a6d-8c27-2c254926ac08}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>WebCrawler\NamesDumper.py</StartupFile>
+    <SearchPath>GaipingLiu\;SimpleTest\</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GaipingLiu\Basic\01BasicTest.py" />
+    <Compile Include="GaipingLiu\Basic\02List.py" />
+    <Compile Include="GaipingLiu\Basic\03IfElse.py" />
+    <Compile Include="GaipingLiu\Basic\04For.py" />
+    <Compile Include="GaipingLiu\Basic\05Dict.py" />
+    <Compile Include="GaipingLiu\Method\06Func.py" />
+    <Compile Include="GaipingLiu\Method\07SuperFeature.py" />
+    <Compile Include="SimpleTest\Reg.py" />
+    <Compile Include="SimpleTest\Sort.py" />
+    <Compile Include="SimpleWeb\hello.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimpleWeb\server.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebCrawler\AvocadoContentDumper.py" />
+    <Compile Include="WebCrawler\EnronContentDumper.py" />
+    <Compile Include="WebCrawler\ASFContentDumper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebCrawler\FamilySpider.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebCrawler\Youdao.py" />
+    <Compile Include="WebCrawler\NamesDumper.py" />
+    <Compile Include="WebCrawler\Youdao.v1.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GaipingLiu\" />
+    <Folder Include="GaipingLiu\Basic" />
+    <Folder Include="GaipingLiu\Method" />
+    <Folder Include="E:\Python\Learning\PythonLearning\SimpleWeb\" />
+    <Folder Include="WebCrawler\" />
+    <Folder Include="SimpleTest" />
+    <Folder Include="SimpleWeb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
